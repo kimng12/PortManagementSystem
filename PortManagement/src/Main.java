@@ -29,7 +29,7 @@ public class Main {
 
         scanner.close();
     }
-}
+
 
     private static void displayAdminMenu(Scanner scanner) {
         int choice;

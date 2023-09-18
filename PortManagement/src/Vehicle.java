@@ -93,7 +93,65 @@ public abstract class Vehicle {
         this.currentFuel = this.fuelCapacity;
     }
 
+    // ... Previous code
+
+    // Method to check if the vehicle needs refueling
+    public boolean needsRefueling() {
+        return this.currentFuel <= this.fuelCapacity * 0.2; // Refuel if fuel drops below 20%
+    }
+
+    // Method to calculate the remaining distance that the vehicle can cover with the current fuel
+    public double remainingDistance(double fuelConsumptionRate) {
+        return this.currentFuel / fuelConsumptionRate;
+    }
+
+    // Method to update the current port of the vehicle
+    public void setCurrentPort(Port port) {
+        this.currentPort = port;
+    }
+
+    // Method to update the current fuel after a trip
+    public boolean updateFuel(double distance, double fuelConsumptionRate) {
+        double fuelNeeded = distance * fuelConsumptionRate;
+        if (this.currentFuel >= fuelNeeded) {
+            this.currentFuel -= fuelNeeded;
+            return true;
+        }
+        return false; // Not enough fuel for the trip
+    }
+
+    // ... Previous code
+
+    // Method to check if the vehicle needs refueling
+    public boolean needsRefueling() {
+        return this.currentFuel <= this.fuelCapacity * 0.2; // Refuel if fuel drops below 20%
+    }
+
+    // Method to calculate the remaining distance that the vehicle can cover with the current fuel
+    public double remainingDistance(double fuelConsumptionRate) {
+        return this.currentFuel / fuelConsumptionRate;
+    }
+
+    // Method to update the current port of the vehicle
+    public void setCurrentPort(Port port) {
+        this.currentPort = port;
+    }
+
+    // Method to update the current fuel after a trip
+    public boolean updateFuel(double distance, double fuelConsumptionRate) {
+        double fuelNeeded = distance * fuelConsumptionRate;
+        if (this.currentFuel >= fuelNeeded) {
+            this.currentFuel -= fuelNeeded;
+            return true;
+        }
+        return false; // Not enough fuel for the trip
+    }
+
     // Add more methods as required
+}
+
+}
+
 }
 
 */

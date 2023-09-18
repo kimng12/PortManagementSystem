@@ -1,0 +1,3 @@
+Username,Password,Role,Port ID (if Port Manager)
+admin,adminpass,Admin,
+manager1,manager1pass,Port Manager,p-001
