@@ -1,6 +1,4 @@
 import java.util.List;
-import java.util.*;
-import java.io.*;
 public abstract class Vehicle {
     private String name;
     private double currentFuel;
@@ -23,6 +21,7 @@ class Ship extends Vehicle {
     private double carryingCapacity;
     private double fuelCapacity;
     private Port currentPort;
+    private List<Container> containers;
     public Ship(String id, String name, double carryingCapacity, double fuelCapacity) {
         this.id = id;
         this.name = name;
@@ -50,6 +49,7 @@ class Truck extends Vehicle {
     private double carryingCapacity;
     private double fuelCapacity;
     private Port currentPort;
+    private List<Container> containers;
     // Add other attributes and methods as needed
 
     public Truck(String id, String name, double carryingCapacity, double fuelCapacity) {
