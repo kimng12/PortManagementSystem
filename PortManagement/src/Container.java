@@ -28,4 +28,3 @@ class DryStorage extends Container {
         return 4.6;
     }
 }
-}
