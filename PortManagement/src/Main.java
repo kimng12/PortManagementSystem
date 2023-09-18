@@ -1,5 +1,5 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+// then press Enter. You can now see whitespace characters in your code.gfvbb
 import java.util.Scanner;
 public class Main {
     // Hardcoded user credentials for simplicity
@@ -29,7 +29,6 @@ public class Main {
 
         scanner.close();
     }
-}
 
     private static void displayAdminMenu(Scanner scanner) {
         int choice;
@@ -45,6 +44,9 @@ public class Main {
             switch (choice) {
                 // Implement the operations
                 case 0:
+                    System.out.println("Logging out...");
+                    break;
+                case 1:
                     System.out.println("Logging out...");
                     break;
                 default:
