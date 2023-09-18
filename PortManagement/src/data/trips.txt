@@ -1,0 +1,2 @@
+Trip ID,Vehicle ID,Departure Port ID,Arrival Port ID,Departure Date,Arrival Date,Status
+t-001,sh-001,p-001,p-002,2023-09-10 10:00:00,2023-09-11 12:00:00,Completed
