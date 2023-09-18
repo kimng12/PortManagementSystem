@@ -1,6 +1,3 @@
 ID,Name,Type,FuelCapacity,CurrentFuel,CurrentPort,CarryingCapacity
 1,ShipA,Ship,1000,500,Port1,2000
-2,TruckB,Truck,200,150,Port2,1000
-ID,Name,Type,FuelCapacity,CurrentFuel,CurrentPort,CarryingCapacity
-1,ShipA,Ship,1000,500,Port1,2000
-2,TruckB,Truck,200,150,Port2,1000
+2,TruckB,Truck,200,150,Port2,10001
