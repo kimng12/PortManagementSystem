@@ -3,7 +3,7 @@
 import java.util.Scanner;
 import java.util.List;
 public class Main {
-    // Hardcoded user credentials for simplicity
+    // Scan type of users by username and password
     private static final String ADMIN_USERNAME = "admin";
     private static final String ADMIN_PASSWORD = "admin123";
 
@@ -11,6 +11,7 @@ public class Main {
     private static final String PORTMANAGER_PASSWORD = "port123";
     private static final int PORTMANAGER_PORTID = 1; // Assuming port ID 1 for this manager
 
+    // Main Program
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -30,7 +31,7 @@ public class Main {
 
         scanner.close();
     }
-
+    // Admin Menu
     private static void displayAdminMenu(Scanner scanner) {
         int choice;
         do {
@@ -53,6 +54,7 @@ public class Main {
             }
         } while (choice != 0);
     }
+    // Vehicles CRUD Menu
     private static void vehicleCRUDMenu(Scanner scanner) {
         int choice;
         do {
@@ -68,15 +70,23 @@ public class Main {
 
             switch (choice) {
                 case 1:
+                    /*
+                    In this case user need to enter the details respectively as the format listed
+                    */
                     System.out.print("Enter vehicle details (format: ID,Name,Type,FuelCapacity,CurrentFuel,CurrentPort,CarryingCapacity): ");
                     String vehicleDetails = scanner.nextLine();
                     VehicleCRUD.createVehicle(vehicleDetails);
                     break;
-                case 2:
+                case 2: // Show all the vehicles
                     List<String> vehicles = VehicleCRUD.readVehicles();
                     vehicles.forEach(System.out::println);
                     break;
                 case 3:
+                    /*
+                    In this case, user need to enter all the details of that vehicle
+                    ID,Name,Type,FuelCapacity,CurrentFuel,CurrentPort,CarryingCapacity. Then they can enter the improvement
+                    for this vehicles
+                    */
                     System.out.print("Enter existing vehicle details to update: ");
                     String oldVehicleDetails = scanner.nextLine();
                     System.out.print("Enter new vehicle details: ");
@@ -84,6 +94,11 @@ public class Main {
                     VehicleCRUD.updateVehicle(oldVehicleDetails, newVehicleDetails);
                     break;
                 case 4:
+                    /*
+                    In this case, user need to enter all the details of that vehicle
+                    ID,Name,Type,FuelCapacity,CurrentFuel,CurrentPort,CarryingCapacity. Then they can delete
+                    for this vehicles
+                    */
                     System.out.print("Enter vehicle details to delete: ");
                     String vehicleToDelete = scanner.nextLine();
                     VehicleCRUD.deleteVehicle(vehicleToDelete);
