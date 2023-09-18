@@ -102,3 +102,95 @@ public class Port {
 
     // other methods...
 }
+
+/*
+import java.util.HashMap;
+import java.util.Map;
+
+public class Port {
+    private String id;  // Unique ID formatted as p-number
+    private String name;
+    private double latitude;
+    private double longitude;
+    private double storingCapacity;
+    private boolean landingAbility;
+    private Map<String, Integer> containerCounts; // A map to keep track of counts of different types of containers
+    private Map<String, Double> containerWeights; // A map to keep track of weights of different types of containers
+    private int numberOfVehicles;
+    // Add more fields like historical traffic data if needed.
+
+    // Constructor
+    public Port(String id, String name, double latitude, double longitude, double storingCapacity, boolean landingAbility) {
+        this.id = id;
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.storingCapacity = storingCapacity;
+        this.landingAbility = landingAbility;
+        this.containerCounts = new HashMap<>();
+        this.containerWeights = new HashMap<>();
+        this.numberOfVehicles = 0;
+    }
+
+    // Getters
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public double getStoringCapacity() {
+        return storingCapacity;
+    }
+
+    public boolean hasLandingAbility() {
+        return landingAbility;
+    }
+
+    public int getNumberOfVehicles() {
+        return numberOfVehicles;
+    }
+
+    // Add a container to the port
+    public void addContainer(Container container) {
+        String type = container.getType();
+        double weight = container.getWeight();
+
+        containerCounts.put(type, containerCounts.getOrDefault(type, 0) + 1);
+        containerWeights.put(type, containerWeights.getOrDefault(type, 0.0) + weight);
+    }
+
+    // Remove a container from the port
+    public void removeContainer(Container container) {
+        String type = container.getType();
+        double weight = container.getWeight();
+
+        if (containerCounts.getOrDefault(type, 0) > 0) {
+            containerCounts.put(type, containerCounts.get(type) - 1);
+            containerWeights.put(type, containerWeights.get(type) - weight);
+        } else {
+            System.out.println("No such container type in the port.");
+        }
+    }
+
+    // Calculate distance to another port
+    public double calculateDistanceTo(Port otherPort) {
+        // Simple Euclidean distance for demonstration; in a real application you'd use more accurate distance measures
+        return Math.sqrt(Math.pow(this.latitude - otherPort.latitude, 2) + Math.pow(this.longitude - otherPort.longitude, 2));
+    }
+
+    // Add more methods based on your requirements like vehicle handling, tracking past and current traffic etc.
+
+}
+
+*/
