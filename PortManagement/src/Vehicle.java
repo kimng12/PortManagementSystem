@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.*;
+import java.io.*;
 public abstract class Vehicle {
     private String name;
     private double currentFuel;
@@ -12,14 +15,62 @@ public abstract class Vehicle {
     public abstract boolean canMoveTo(Port port);
     public abstract void refuel();
 }
+class Ship extends Vehicle {
+    // Ship-specific methods and attributes...
+    private String id;
+    private String name;
+    private double currentFuel;
+    private double carryingCapacity;
+    private double fuelCapacity;
+    private Port currentPort;
+    public Ship(String id, String name, double carryingCapacity, double fuelCapacity) {
+        this.id = id;
+        this.name = name;
+        this.currentFuel = fuelCapacity;
+        this.carryingCapacity = carryingCapacity;
+        this.fuelCapacity = fuelCapacity;
+    }
 
-//class Ship extends Vehicle {
-//    // Ship-specific methods and attributes...
-//}
+    @Override
+    public boolean canMoveTo(Port port) {
+        return false;
+    }
 
-//class Truck extends Vehicle {
-//    // Truck-specific methods and attributes...
-//}
+    @Override
+    public void refuel() {
+
+    }
+}
+
+class Truck extends Vehicle {
+    // Truck-specific methods and attributes...
+    private String id;
+    private String name;
+    private double currentFuel;
+    private double carryingCapacity;
+    private double fuelCapacity;
+    private Port currentPort;
+    // Add other attributes and methods as needed
+
+    public Truck(String id, String name, double carryingCapacity, double fuelCapacity) {
+        this.id = id;
+        this.name = name;
+        this.currentFuel = fuelCapacity;
+        this.carryingCapacity = carryingCapacity;
+        this.fuelCapacity = fuelCapacity;
+
+    }
+
+    @Override
+    public boolean canMoveTo(Port port) {
+        return false;
+    }
+
+    @Override
+    public void refuel() {
+
+    }
+}
 
 /*
 public abstract class Vehicle {
