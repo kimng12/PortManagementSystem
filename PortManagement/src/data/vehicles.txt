@@ -1,3 +1,10 @@
-ID,Name,Type,FuelCapacity,CurrentFuel,CurrentPort,CarryingCapacity
-1,ShipA,Ship,1000,500,Port1,2000
-2,TruckB,Truck,200,150,Port2,10001
+ID,Name,Type,FuelCapacity,CurrentFuel,CurrentPort,CarryingCapacity,ID_containers
+1,Basic_Truck,Dry_Storage,200,150,Port2,10001,
+2,Basic_Truck,Open_Top ,200,150,Port2,10001,
+3,Basic_Truck,Open_Side,200,150,Port2,10001,
+4,Reefer_Truck,Refrigerated,200,150,Port2,10001,
+5,Tanker_Truck,Liquid,200,150,Port2,10001,
+
+
+
+
